@@ -1,0 +1,33 @@
+name: awesome_vote_2019
+description: Phone app for 5across event used to vote and pitch new ideas.
+author: Mark Hisle <mark.hisle@awesomeinc.org>
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^0.4.0+6
+  firebase_auth: ^0.11.1+6 #used for several different authentication methods securely
+  google_sign_in: ^4.0.2 #google likes to be special :)
+  firebase_dynamic_links: ^0.3.0
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_driver:
+    sdk: flutter
+  test: any
+
+flutter:
+  uses-material-design: true
+  assets: 
+    - assets/images/5-Across-Logo.png
+
