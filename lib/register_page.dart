@@ -22,12 +22,24 @@ class RegisterPageState extends State<RegisterPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        backgroundColor: Colors.red,
+        centerTitle: true,
       ),
       body: Form(
         key: _formKey,
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 40.0),
+              child: Text('Register a new account and begin betting on pitches!',
+              style: new TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold
+              )
+              ),
+            ),
             TextFormField(
               controller: _emailController,
               decoration: InputDecoration(labelText: 'Email'),

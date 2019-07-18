@@ -30,4 +30,5 @@ flutter:
   uses-material-design: true
   assets: 
     - assets/images/5-Across-Logo.png
+    - assets/images/loading.gif
 
