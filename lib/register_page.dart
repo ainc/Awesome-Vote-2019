@@ -27,6 +27,7 @@ class RegisterPageState extends State<RegisterPage> {
       ),
       body: Form(
         key: _formKey,
+        child: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -92,6 +93,7 @@ class RegisterPageState extends State<RegisterPage> {
                           : TextStyle(color: Colors.red))),
             )
           ],
+        ),
         ),
       ),
     );
