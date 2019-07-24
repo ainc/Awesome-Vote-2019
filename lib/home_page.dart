@@ -76,18 +76,47 @@ class HomePageState extends State<HomePage> {
               children:
                   snapshot.data.documents.map((DocumentSnapshot document) {
                 return new Column(children: <Widget>[
-                  ListTile(
-                    title: new Text(document['pitch1'][0]),
-                    subtitle: new Text(document['pitch1'][1]),
-                  ),
-                  ListTile(
-                    title: new Text(document['pitch2'][0]),
-                    subtitle: new Text(document['pitch2'][1]),
-                  ),
-                  ListTile(
-                    title: new Text(document['pitch3'][0]),
-                    subtitle: new Text(document['pitch3'][1]),
-                  ),
+                  Card(
+                      child: ListTile(
+                          leading: FlutterLogo(size: 72.0),
+                          title: new Text(document['pitch1'][0]),
+                          subtitle: new Text(document['pitch1'][1],
+                              maxLines: 2, overflow: TextOverflow.ellipsis),
+                          trailing: Icon(Icons.more_vert),
+                          isThreeLine: true)),
+                  Card(
+                      child: ListTile(
+                          leading: FlutterLogo(size: 72.0),
+                          title: new Text(document['pitch2'][0]),
+                          subtitle: new Text(document['pitch2'][1],
+                              maxLines: 2, overflow: TextOverflow.ellipsis),
+                          trailing: Icon(Icons.more_vert),
+                          isThreeLine: true)),
+                  Card(
+                      child: ListTile(
+                          leading: FlutterLogo(size: 72.0),
+                          title: new Text(document['pitch3'][0]),
+                          subtitle: new Text(document['pitch3'][1],
+                              maxLines: 2, overflow: TextOverflow.ellipsis),
+                          trailing: Icon(Icons.more_vert),
+                          isThreeLine: true)),
+                  Card(
+                      child: ListTile(
+                          leading: FlutterLogo(size: 72.0),
+                          title: new Text(document['pitch4'][0]),
+                          subtitle: new Text(document['pitch4'][1],
+                              maxLines: 2, overflow: TextOverflow.ellipsis),
+                          trailing: Icon(Icons.more_vert),
+                          isThreeLine: true)),
+                  Card(
+                      child: ListTile(
+                          leading: FlutterLogo(size: 72.0),
+                          title: new Text(document['pitch5'][0]),
+                          subtitle: new Text(document['pitch5'][1],
+                              maxLines: 2, overflow: TextOverflow.ellipsis),
+                          trailing: Icon(Icons.more_vert),
+                          isThreeLine: true,
+                  )),
                 ]);
               }).toList(),
             );
@@ -109,12 +138,13 @@ class HomePageState extends State<HomePage> {
             return new Column(
               children:
                   snapshot.data.documents.map((DocumentSnapshot document) {
-                
                 String username = document[widget.user].toString();
                 //print(username);
                 return new Column(children: <Widget>[
                   Text(
                     "Current point total: " + document[username].toString(),
+                    style: new TextStyle(
+                        fontSize: 32, fontWeight: FontWeight.bold),
                   ),
                 ]);
               }).toList(),
@@ -123,5 +153,4 @@ class HomePageState extends State<HomePage> {
       },
     );
   }
-
 }

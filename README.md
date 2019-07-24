@@ -27,6 +27,16 @@ all OS's to play nicely together.
 
 Author: Mark Hisle (mark.hisle@awesomeinc.org)
 
+TODO:
+- description page/hero animations for pitches
+- BUG: error handling/invalid login or registration processing
+- betting process
+- reset password
+- leaderboard?
+- clean up page transition process, backend (bugs) and frontend (animations)
+- ios 
+- documentation
+
 ## Getting Started
 
 Note: Currently not fully implemented for iOS.
