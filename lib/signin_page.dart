@@ -159,7 +159,7 @@ class _EmailPasswordFormState extends State<_EmailPasswordForm> {
       }
     } on Exception catch (e) {
       _errorMessage = e.toString();
-      //dont always display- perhaps this is ignored sometimes?
+      //doesnt always display- perhaps this is ignored sometimes?
       _errorMessage = _errorMessage.substring(_errorMessage.indexOf(',') + 1);
       _errorMessage = _errorMessage.substring(0, _errorMessage.indexOf(','));
       //print(_errorMessage);

@@ -6,7 +6,7 @@ final FirebaseAuth _auth = FirebaseAuth.instance;
 
 class HomePage extends StatefulWidget {
   final String title = 'Pitch';
-  final String user; //need to do something with this
+  final String user;
   //constructor
   HomePage({this.user});
 
@@ -109,9 +109,12 @@ class HomePageState extends State<HomePage> {
             return new Column(
               children:
                   snapshot.data.documents.map((DocumentSnapshot document) {
+                
+                String username = document[widget.user].toString();
+                //print(username);
                 return new Column(children: <Widget>[
                   Text(
-                    "Current point total: " + document['mark_hisle'].toString(),
+                    "Current point total: " + document[username].toString(),
                   ),
                 ]);
               }).toList(),
@@ -120,4 +123,5 @@ class HomePageState extends State<HomePage> {
       },
     );
   }
+
 }
