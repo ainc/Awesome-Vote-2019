@@ -27,6 +27,22 @@ all OS's to play nicely together.
 
 Author: Mark Hisle (mark.hisle@awesomeinc.org)
 
+Current features:
+- Login page and transition backend with basic UI/styling
+- Registration with some error handling
+    - new users receive a set number of points/money to start with
+    - emails cannot be repeated
+    - linked to Firebase Auth database (more below)
+    - kinda sorta handles invalid registrations, could be fleshed out
+- loading screen of app (textless 5across logo), might not work on iOS
+- home page containing user data and 5 pitches pulled from Firebase
+    - user data is in the user_data collection in the firebase, holding a firebase ID,
+      username retrieved by said ID, and points allocated to each user
+    - pitch data is held in pitch_ideas, allowing admins to easily change data by 
+      logging into the firebase
+    - firebase can be accessed through awesomeinclexington@gmail.com account
+- a few images for styling
+
 TODO:
 - description page/hero animations for pitches
 - BUG: error handling/invalid login or registration processing
@@ -39,7 +55,7 @@ TODO:
 
 ## Getting Started
 
-Note: Currently not fully implemented for iOS.
+Note: Currently not fully implemented for iOS, more configuring will need to be set up on a different environment.
 
 For help getting started with Flutter, view
 [documentation](http://flutter.io/).
