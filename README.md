@@ -57,5 +57,13 @@ TODO:
 
 Note: Currently not fully implemented for iOS, more configuring will need to be set up on a different environment.
 
-For help getting started with Flutter, view
-[documentation](http://flutter.io/).
+For help getting started with Flutter, view their
+[documentation](http://flutter.io/) and follow the general guide below.
+
+1. Install Flutter through download or git. This will vary depending upon your OS. It is highly recommended to have git installed and set up on your device before using Flutter.
+2. Add the flutter bin (INSTALL_DIRECTORY/flutter/bin) to your PATH variable. Flutter commands will not work in your respective console without setting this.
+3. Once you have confirmed that you can run flutter commands (run "flutter" in the console), run the command "flutter doctor". This command will aid you with the rest of the setup.
+4. If you are missing any necessary SDK's or libraries, flutter doctor will direct you to where these libraries can be downloaded and set up.
+5. Ensure that the necessary IDE's are installed. It is recommended but not required that you have VS Code installed, as it is platform independent. You can also alternatively use Android Studio for Android or XCode for iOS development- however, these are specific to the devices that they are designed towards.
+6. It is strongly recommended that you set up some form of software preview device by either downloading and setting up an emulator or running flutter doctor with a compatible device plugged in to your computer. If you do not have a mobile device or do not have compatibility between your phone and laptop (e.x.- a Windows PC and an iPhone), you can setup a free Android emulator with the Android Studio IDE. To do this, start Android Studio, select "Configure", then "AVD Manager", then "Create Device". NOTE: the emulator can take a very long time to download and initially st itself up
+7. If you ever run into any issues with Flutter, SDK setup, or emulators/simulators, rerun the flutter doctor command. This will often locate any issue for you and direct you to solutions. It is often very difficult to narrow down errors in installment without using this command.
